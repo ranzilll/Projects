@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(51, 19, 81);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: whitesmoke;
+    min-width: 200px;
+    width: 500px;
+    border-radius: 5px;
+    padding-top: 35px;
+    padding-left: 30px;
+}
+
+.heading {
+    display: flex;
+}
+
+.headtxt {
+    color: rgb(51, 19, 81);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.inputbox input {
+    width: 340px;
+    height: 44px;
+    background-color: rgb(218, 218, 218);
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.inputbox input::placeholder {
+    color: rgb(50, 50, 50);
+}
+
+.addbtn button {
+    height: 44px;
+    width: 100px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 16px;
+    position: absolute;
+    right: 15%;
+}
+
+
+.headimg img {
+    height: 30px;
+    width: 28px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+/* styling the lists  */
+.list ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 18px 36px;
+    height: 38px;
+    width: 340px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.list {
+    /* border: 2px solid; */
+    padding-bottom: 8px;
+    margin-left: 28px;
+    padding-left: 5px;
+}
+
+.list ul li::before {
+    content: '';
+    position: absolute;
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    background-image: url(images/unchecked-28.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 0px;
+}
+
+.list ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.list ul li.checked::before {
+    background-image: url(images/tick.png);
+    background-size: cover;
+    background-position: center;
+    border: none;
+    height: 28px;
+    width: 28px;
+}
+
+.list ul li span {
+    position: absolute;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+/* Delete span specific styles */
+.list ul li span.delete {
+    top: 9%;
+    right: 2%;
+    font-size: 30px;
+    color: #555;
+    /* background-color: red; */
+}
+
+/* Edit span specific styles */
+.list ul li span.edit {
+    top: 5%;
+    right: 10%;
+    color: #555;
+    /* background-color: yellow; */
+}
+
+.list ul li span:hover {
+    background: #d8dadd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive for iphone  */
+
+@media only screen and (max-width: 420px) {
+    .box {
+        max-width: 300px;
+        min-height: 300px;
+    }
+
+    .input {
+        display: flex;
+        /* margin-top: 20px; */
+        margin-left: -20px;
+        position: relative;
+    }
+
+    .inputbox input {
+        position: absolute;
+        top: 50%;
+        width: 260px;
+        height: 380px;
+        background-color: rgb(218, 218, 218);
+        border: none;
+        border-radius: 16px;
+    }
+
+    .addbtn button {
+        height: 38px;
+        width: 80px;
+        color: white;
+        background-color: rgb(249, 98, 38);
+        border: none;
+        border-radius: 16px;
+        position: absolute;
+        right: 8%;
+    }
+
+    .list {
+        border: 2px solid;
+        padding-bottom: 8px;
+        margin-left: 28px;
+        /* padding-left: 5px; */
+        position: absolute;
+        top: 45%;
+        left: 2%;
+        max-width: fit-content;
+    }
+    .list ul li {
+        list-style: none;
+        font-size: 18px;
+        padding: 12px 8px 18px 36px;
+        height: 38px;
+        max-width: 230px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+    .box {
+        max-width: 300px;
+        min-height: 350px;
+    }
+
+    .input {
+        display: flex;
+        /* margin-top: 20px; */
+        margin-left: -20px;
+        position: relative;
+    }
+
+    .inputbox input {
+        position: absolute;
+        width: 260px;
+        height: 38px;
+        background-color: rgb(218, 218, 218);
+        border: none;
+        border-radius: 16px;
+    }
+
+    .addbtn button {
+        height: 38px;
+        width: 80px;
+        color: white;
+        background-color: rgb(249, 98, 38);
+        border: none;
+        border-radius: 16px;
+        position: absolute;
+        right: 6%;
+    }
+
+    .list {
+        border: 2px solid;
+        padding-bottom: 8px;
+        /* margin-left: 28px; */
+        /* padding-left: 5px; */
+        position: fixed;
+        top: 40%;
+        left: 15%;
+        min-width: 250px;
+    }
+    .list ul li {
+        list-style: none;
+        font-size: 18px;
+        padding: 12px 8px 18px 36px;
+        height: 38px;
+        max-width: 280px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+}
+
+@media only screen and (max-width: 340px) {
+    .box {
+        width: 250px;
+    }
+
+    .input {
+        display: flex;
+        /* margin-top: 20px; */
+        margin-left: -20px;
+        position: relative;
+    }
+
+    .inputbox input {
+        position: absolute;
+        width: 230px;
+        height: 38px;
+        background-color: rgb(218, 218, 218);
+        border: none;
+        border-radius: 16px;
+    }
+
+    .addbtn button {
+        height: 38px;
+        width: 65px;
+        color: white;
+        background-color: rgb(249, 98, 38);
+        border: none;
+        border-radius: 16px;
+        position: absolute;
+        right: 6%;
+    }
+}

@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    background-image: linear-gradient(white,rgb(149, 143, 143));
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.container1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-left: 230px;
+    padding-top: 50px;
+}
+
+.container h2{
+    font-family: "Sofia";
+    font-size: 65px;
+    margin-right: 50px;
+    background: linear-gradient(to left,rgb(40, 38, 38),rgb(96, 91, 91));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; 
+     color: transparent;
+}
+
+.container1 h1{
+    height: 300px;
+    width: 250px;
+    font-size: 72px;
+    background: linear-gradient(to right,rgb(40, 38, 38),rgb(120, 118, 118));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; 
+     color: transparent;
+}
+
+.container2
+{
+    /* border: 3px solid rgb(70, 68, 68); */
+    border-radius: 180px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 680px;
+    margin-top: 135px;
+    box-shadow: 6px 8px 8px 0 rgba(0, 0, 0, 0.2), 6px 8px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+
+.hourclock{
+    border: 3px solid rgb(80, 80, 80);
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 230px;
+    width: 230px;
+    border-radius: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 2%;
+}
+
+.hourclock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 5px;
+    text-align: center;
+}
+
+.hourclock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.hourclock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(80, 80, 80);
+    z-index: 2;
+}
+.digitalclock{
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    right: 5%;
+    padding-left: 30px;
+    padding-top: 23px;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* z-index: 2; */
+    /* transform-origin: bottom; */
+}
+
+.hand i{
+    position: absolute;
+    background-color: var(--color);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
+.datetime{
+    height:100px;
+    display: flex;
+    flex-direction: column;
+}
+.day{
+    height: 35%;
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(to left,rgb(40, 38, 38),rgb(60, 58, 58));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; 
+     color: transparent;
+}
+.dat{
+    height: 65%;
+    font-size: 34px;
+    font-weight: bold;
+    background: linear-gradient(to left,rgb(40, 38, 38),rgb(50, 48, 48));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; 
+     color: transparent;
+     padding-left: 20px;
+     padding-top: 5px;
+}
+.timenow{
+    font-size: 26px;
+    font-weight: bold;
+    background: linear-gradient(to left,rgb(40, 38, 38),rgb(60, 58, 58));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; 
+     color: transparent;
+     padding-top: 8px;
+}
+
+.empty{
+    border: 1px solid grey;
+}
+
+.timenow .ampm{
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container2{
+        margin-top: -90px;
+        margin-bottom: 40px;
+    }
+    .container1{
+        margin-left: -150px;
+    }
+  }
+
+@media screen and (max-width: 412px){
+    .container2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 1110px;
+        margin-top: -60px;
+        box-shadow: none;
+        border: none;
+        border-radius: none;
+    }
+    .hourclock{
+        position: relative;
+        margin-bottom:390px;
+        margin-top: -80px;
+        padding: none;
+    }
+    .dat{
+        margin-left: -30px;
+    }
+    .empty{
+        border: none;
+    }
+}
+

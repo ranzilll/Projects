@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>BMI CALCULATOR</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page1" id="page1">
+            <h2 class="head">BMI <span>Calculator</span></h2>
+            <h3> Please choose your gender</h3>
+            <div class="gender">
+                <!-- onclick="navigateTo('male')" -- previous logic -->
+                <div class="male" onclick="ShowCalculationPage('male')" >
+                    <div class="maletxt">
+                        Male 
+                    </div>
+                    <div class="maleicons">
+                        <div class="micon">
+                             <i class="fa fa-mars" style="font-size:38px;color:white;background-color: #22689E;padding: 5px 8px;font-weight: bold;border-radius: 50px;"></i>
+                        </div>
+                       
+                        <div class="maleemoji emgimg">
+                            <img src="man.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="female" onclick="ShowCalculationPage('female')">
+                    <div class="femaletxt">
+                        Female
+                    </div>
+                    <div class="femaleicons">
+                        <div class="ficon">
+                            <i class="fa fa-venus" style="font-size:38px;color:white;background-color: #FFB199;padding: 5px 9px; font-weight: bold;border-radius: 50px;"></i>
+                        </div>
+                        <div class="femaleemoji emgimg">
+                            <img src="woman.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- page2  -->
+    <div class="page2" id="page2" style="display:none;">
+        <h2 class="head"><span><i class="fa fa-angle-left" onclick="window.location.href = 'index.html'"
+                    style="padding-right:30px;"></i></span>BMI <span>Calculator</span></h2>
+        <h3> Please Modify the values</h3>
+        <div class="container">
+            <div class="dropdown">
+                <label for="weight" class="bw">Weight (kg) </label>
+                <select id="weight" class="option">
+                    <option id="opt" value="" selected disabled>Select Weight</option>
+                </select>
+                <div class="iconA">
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <label for="age" class="ba">Age </label>
+                <select id="age" class="option">
+                    <option id="opt" value="" selected disabled>Select Age</option>
+                </select>
+                <div class="iconA">
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="input-group igh">
+            <label>Height (cm)</label>
+            <input type="range" id="height" min="100" max="250" value="170" oninput="displayHeightValue()">
+            <span id="heightValue" style=" font-size: 20px; color:#9D6F1F" >170 cm</span>
+        </div>
+        <button style="margin-top: 20px; height: 38px; width: 120px; font-size: 18px; background-color: rgb(20, 183, 20); color: white; border: none; border-radius: 6px;" onclick="calculateBMI()">Calculate</button>
+    </div>
+
+     <!-- Modal -->
+     <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="bmiResult"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
