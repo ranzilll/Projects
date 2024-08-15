@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 500px;
+    min-width: 500px;
+    background: rgb(243, 63, 251);
+    background: linear-gradient(0deg, rgb(122, 33, 127) 0%, rgba(0, 0, 0, 1) 100%);
+    color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.benifit{
+    display: flex;
+    justify-content: center;
+    min-height: 35px;
+    min-width: 300px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+.mainimg img {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    border: 3px solid rgb(251, 183, 255);
+    object-fit: cover;
+    border-image-slice: 1;
+    border-radius: 50%;
+    position: relative;
+    top: 5%;
+    left: 22%;
+}
+
+.keypoints{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 250px;
+    min-width: 300px;
+}
+.key1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(98, 96, 98);
+    border-radius: 5px;
+    gap: 20px;
+    min-height: 40px;
+    min-width: 380px;
+    background-color: rgba(123, 121, 123, 0.332);
+}
+
+.sociallinks{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 12px;
+    min-width: 200px;
+    font-size: 25px;
+}
+
+/* style for toggle button  */
+
+.switchbutton{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 5%;
+    margin: 5px 0px;
+}
+.toggle-label{
+    width: 4.7rem;
+    height: 1.6rem;
+    display: inline-block;
+    /* position: relative; */
+    background-color: rgba(123, 121, 123, 0.332);
+    border: 2px solid rgb(98, 96, 98);
+    border-radius: 20px;
+}
+
+#checkbox 
+{
+    visibility: hidden;
+}
+
+.toggle-ball{
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+    bottom: 0.2%;
+    transition: all .2s linear;
+}
+
+/* .toggle-ball:hover{
+    background-color: yellow;
+} */
+
+/* Dark Mode */
+
+#checkbox:checked + .toggle-label .toggle-ball
+{
+    background-color: black;
+    transform: translate(3rem);
+}
+
+/* .body */
+
+.dark-mode .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 500px;
+    min-width: 500px;
+    background: rgb(251, 243, 251);
+    background: linear-gradient(0deg, rgb(255, 200, 118) 0%, rgb(241, 236, 236) 100%);
+    color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    color: black;
+}
+
+
+.dark-mode .key1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgb(98, 96, 98);
+        border-radius: 5px;
+        gap: 20px;
+        min-height: 40px;
+        min-width: 380px;
+        background-color: rgba(207, 197, 207, 0.332);
+}
+
+.dark-mode .mainimg img {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    border: 3px solid rgb(251, 172, 70);
+    object-fit: cover;
+    border-image-slice: 1;
+    border-radius: 50%;
+    position: relative;
+    top: 5%;
+    left: 22%;
+}
+
+.toggle-ball .moon-icon,
+.toggle-ball .sun-icon {
+    font-size: 1.2rem;
+    color: rgb(122, 33, 127);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+}
+
+/* Initially hide the sun icon */
+.sun-icon {
+    opacity: 0;
+}
+
+/* Show the sun icon and hide the moon icon when checked */
+#checkbox:checked + .toggle-label .toggle-ball .sun-icon {
+    opacity: 1;
+}
+
+#checkbox:checked + .toggle-label .toggle-ball .moon-icon {
+    opacity: 0;
+}
+
+/* Adjust background color of the toggle ball */
+#checkbox:checked + .toggle-label .toggle-ball .sun-icon{
+    color: orange;
+    background-color: white;
+}
+#checkbox:checked + .toggle-label .toggle-ball{
+    background-color: white;
+}
+
+/* Hover effect for the toggle button when unchecked */
+.toggle-label:hover .toggle-ball {
+    background-color: yellow;
+}
+
+/* Ensure the sun icon background also changes to yellow */
+.toggle-label:hover .toggle-ball .sun-icon {
+    background-color: yellow;
+}
+
+/* Hover effect for the toggle button when checked */
+#checkbox:checked + .toggle-label:hover .toggle-ball {
+    background-color: yellow;
+}
+
+/* Ensure the sun icon background also changes to yellow */
+#checkbox:checked + .toggle-label:hover .toggle-ball .sun-icon {
+    background-color: yellow;
+}
+
+/* Remove click cursor for the toggle label */
+.toggle-label {
+    cursor: default;
+}
+
+/* Remove click cursor when hovering over the toggle ball */
+.toggle-label:hover .toggle-ball {
+    cursor: default;
+}
+
+/* Remove click cursor when the toggle is checked and hovering over the toggle ball */
+#checkbox:checked + .toggle-label:hover .toggle-ball {
+    cursor: default;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .mainimg img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .keypoints {
+        min-height: 200px;
+        min-width: 260px;
+    }
+
+    .key1 {
+        min-width: 280px;
+    }
+
+    .sociallinks {
+        font-size: 20px;
+    }
+
+    .toggle-label {
+        width: 4rem;
+        height: 1.4rem;
+    }
+
+    .toggle-ball {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}
+
+/* Responsive design for phones */
+@media (max-width: 480px) {
+    .container {
+        height: auto;
+        padding: 15px;
+    }
+
+    .mainimg img {
+        height: 100px;
+        width: 100px;
+        left: 28%;
+    }
+
+    .keypoints {
+        min-height: 180px;
+        min-width: 200px;
+    }
+
+    .key1 {
+        min-width: 240px;
+    }
+
+    .sociallinks {
+        font-size: 18px;
+    }
+
+    .toggle-label {
+        width: 3.5rem;
+        height: 1.2rem;
+    }
+
+    .toggle-ball {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .toggle-ball .moon-icon,
+    .toggle-ball .sun-icon {
+        font-size: 1rem;
+    }
+}
+
+
+
