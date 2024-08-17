@@ -246,7 +246,7 @@ body {
 @media (max-width: 768px) {
     .container,
     .dark-mode .container {
-        height: auto;
+        min-height: 120vh;
         padding: 20px;
     }
 
@@ -266,6 +266,8 @@ body {
     .key1,
     .dark-mode .key1 {
         min-width: 280px;
+        padding: 10px;
+        margin-top: 5px;
     }
 
     .sociallinks,
@@ -290,7 +292,7 @@ body {
 @media (max-width: 480px) {
     .container,
     .dark-mode .container {
-        height: auto;
+        min-height: 150vh;
         padding: 15px;
     }
 
@@ -309,6 +311,8 @@ body {
     .key1,
     .dark-mode .key1 {
         min-width: 240px;
+        padding: 10px;
+        margin-top: 5px;
     }
 
     .sociallinks,
