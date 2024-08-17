@@ -252,9 +252,9 @@ body {
 
     .mainimg img,
     .dark-mode .mainimg img {
-        height: 120px;
-        width: 120px;
-        left: 30%;
+        height: 220px;
+        width: 220px;
+        left: 15%;
     }
 
     .keypoints,
@@ -267,12 +267,13 @@ body {
     .dark-mode .key1 {
         min-width: 280px;
         padding: 10px;
-        margin-top: 5px;
+        margin-top: 20px;
     }
 
     .sociallinks,
     .dark-mode .sociallinks {
-        font-size: 20px;
+        margin-top: 15px;
+        font-size: 28px;
     }
 
     .toggle-label,
@@ -298,8 +299,10 @@ body {
 
     .mainimg img,
     .dark-mode .mainimg img {
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
+        right: 50%;
+        left: 20%;
     }
 
     .keypoints,
@@ -310,14 +313,15 @@ body {
 
     .key1,
     .dark-mode .key1 {
-        min-width: 240px;
+        max-width: 240px;
         padding: 10px;
-        margin-top: 5px;
+        margin-top: 20px;
     }
 
     .sociallinks,
     .dark-mode .sociallinks {
-        font-size: 18px;
+        margin-top: 15px;
+        font-size: 28px;
     }
 
     .toggle-label,
