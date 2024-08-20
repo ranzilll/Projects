@@ -1,0 +1,289 @@
+body {
+    background: rgb(0, 5, 21);
+    min-height: 100vh;
+    color: rgb(227, 219, 219);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 80px;
+}
+
+.heading {
+    width: 400px;
+}
+
+.heading h1 {
+    margin-bottom: -5px;
+}
+
+.subheading {
+    margin-left: -9px;
+}
+
+.heading h1,
+.subheading h2,
+.animatedtext {
+    font-family: "Poppins", system-ui !important;
+    font-weight: 450;
+    font-style: normal;
+    user-select: none;
+}
+
+.subheading h2 {
+    color: rgb(227, 219, 219);
+}
+
+.animatedtext {
+    user-select: none;
+}
+
+.animatedtext .txt {
+    position: relative;
+    color: rgb(175, 175, 255);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.animatedtext .txt.firsttxt {
+    color: rgb(227, 219, 219);
+}
+
+.txt.secondtxt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 5, 21);
+    border-left: 2px solid rgb(227, 219, 219);
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+#countdown {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#box-container {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #e6d9d9;
+    position: relative;
+    margin: 20px auto;
+    margin-top: 220px;
+    display: none; /* Initially hidden */
+}
+
+#dot {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(175, 175, 255);
+    position: absolute;
+    top: -10px; /* Start at the top border */
+    left: -10px; /* Start at the left border */
+    border-radius: 50%;
+    display: none; /* Hide dot initially */
+}
+
+#guideline {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    display: none; /* Initially hidden */
+}
+
+#start-breathing {
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the button's own size */
+    border: none;
+    font-size: large;
+    color: rgb(0, 5, 21);
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(175, 175, 255);
+    border-radius: 5px;
+    z-index: 10; /* Ensure it's on top of other elements */
+}
+
+#stop-breathing {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    border: none;
+    font-size: large;
+    color: rgb(0, 5, 21);
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(175, 175, 255);
+    border-radius: 5px;
+    z-index: 10; /* Ensure it's on top of other elements */
+}
+@keyframes move-right {
+    from { left: -10px; top: -10px; }
+    to { left: 190px; top: -10px; }
+}
+
+@keyframes move-down {
+    from { left: 190px; top: -10px; }
+    to { left: 190px; top: 190px; }
+}
+
+@keyframes move-left {
+    from { left: 190px; top: 190px; }
+    to { left: -10px; top: 190px; }
+}
+
+@keyframes move-up {
+    from { left: -10px; top: 190px; }
+    to { left: -10px; top: -10px; }
+}
+
+.back{
+    font-size: 20px;
+    position: absolute;
+    top: 70%;
+}
+
+#countdown{
+    position: absolute;
+    top: 45%;
+    font-size: 65px;
+}
+
+/* responsivness  */
+
+@media only screen and (max-width: 768px) {
+    .heading h1 {
+        font-size: 28px;
+    }
+
+    .subheading h2 {
+        font-size: 20px;
+    }
+
+    .animatedtext .txt {
+        font-size: 20px;
+    }
+
+    #countdown {
+        font-size: 40px;
+    }
+
+    #box-container {
+        margin-top: 270px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .back {
+        margin-top: 15px;
+        font-size: 22px;
+    }
+
+    #start-breathing,
+    #stop-breathing {
+        font-size: medium;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width:768px){
+    #box-container {
+        margin-top: 380px; /* Large value to test */
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width:1280px){
+    #box-container {
+        margin-top: 200px; /* Large value to test */
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width:362px){
+    #box-container {
+        margin-top: 290px; /* Large value to test */
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width:413px){
+    #box-container {
+        position: absolute; /* Large value to test */
+        top: 20%;
+        left: 25%;
+        width: 200px;
+        height: 200px;
+    }
+
+    #guideline{
+        position: absolute;
+        top: 20%;
+        left: 43%;
+        font-size: large;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .heading h1 {
+        font-size: 24px;
+        margin-left: 40px;
+    }
+
+    .subheading h2 {
+        font-size: 18px;
+    }
+
+    .animatedtext .txt {
+        font-size: 18px;
+    }
+
+    #countdown {
+        font-size: 35px;
+    }
+
+    #box-container {
+        width: 200px;
+        height: 200px;
+        margin-top: 140px;
+    }
+
+    .back {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+
+    #start-breathing,
+    #stop-breathing {
+        font-size: 20px;
+        padding: 6px;
+    }
+}

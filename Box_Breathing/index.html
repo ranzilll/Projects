@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BoxBreathing</title>
+</head>
+<body>
+    <div id="posture-reminder">Sit with your back straight!</div>
+
+    <!-- User Input Section -->
+    <div id="input-section">
+        <label for="repetitions">Choose repetitions:</label>
+        <select id="repetitions">
+            <option value="3">3 times</option>
+            <option value="5">5 times</option>
+            <option value="7">7 times</option>
+        </select>
+        <button id="start-breathing">Start Breathing</button>
+        <button id="give-up" style="display: none;">Give Up</button>
+    </div>
+    
+    <!-- Breathing Activity Section -->
+    <div id="breathing-section" style="display: none;">
+        <div id="box-container">
+            <div id="dot"></div>
+        </div>
+        <div id="guideline"></div>
+        <div id="timer"></div>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
